@@ -18,7 +18,7 @@ a{text-decoration:none;color:inherit}
 .logo{font:700 1.45rem Georgia,serif;letter-spacing:2px}
 .navlinks{display:flex;gap:22px;font-size:.92rem}.navlinks a:hover{color:#e5bf82}
 .hero{min-height:82vh;display:grid;place-items:center;text-align:center;color:white;padding:80px 20px;
-background:linear-gradient(rgba(30,19,14,.48),rgba(30,19,14,.62)),url('https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1800&q=85') center/cover}
+background:linear-gradient(rgba(30,19,14,.48),rgba(30,19,14,.62)),url('Fotos%20Catering/WhatsApp%20Image%202026-09-27%20at%2020.05.37.jpeg') center/cover}
 .hero-inner{max-width:850px}.eyebrow{letter-spacing:4px;text-transform:uppercase;font-size:.8rem}
 .hero h1{font-size:clamp(3.2rem,8vw,6.8rem);margin:12px 0}.hero p{font-size:1.25rem;max-width:650px;margin:0 auto 28px}
 .btn{display:inline-block;padding:13px 22px;border-radius:999px;font-weight:700;margin:5px;background:var(--gold);color:#241b17}
@@ -32,6 +32,11 @@ h2{font-size:clamp(2.1rem,4vw,3.5rem)}
 .card{background:white;border-radius:22px;overflow:hidden;box-shadow:0 12px 35px #241b1712}
 .card img{width:100%;height:240px;object-fit:cover}.card-body{padding:22px}
 .feature{display:grid;grid-template-columns:1.05fr .95fr;gap:55px;align-items:center}
+.catering{max-width:none;background:#241b17;color:white;padding:90px 6%}
+.catering-inner{max-width:1250px;margin:auto}.catering .kicker{color:#e6c187}
+.catering-gallery{display:grid;grid-template-columns:1.2fr .8fr;gap:18px;margin-top:35px}
+.catering-gallery img{width:100%;height:310px;object-fit:cover;border-radius:12px}
+.catering-gallery img:first-child{grid-row:span 2;height:638px}
 .whatsapp{background:#25D366;color:white;padding:16px 24px;border-radius:999px;font-weight:800;display:inline-block}
 .contact{display:grid;grid-template-columns:1fr 1fr;gap:35px}
 .contact-box{background:white;border-radius:22px;padding:30px;box-shadow:0 12px 35px #241b1712}
@@ -39,7 +44,8 @@ footer{background:#1d1512;color:#ddd;text-align:center;padding:35px 20px}
 small{color:#aaa}
 @media(max-width:800px){
  .navlinks{display:none}.intro,.feature,.contact{grid-template-columns:1fr}
- .cards{grid-template-columns:1fr} section{padding:60px 5%}.hero{min-height:75vh}
+ .cards,.catering-gallery{grid-template-columns:1fr}.catering-gallery img,.catering-gallery img:first-child{height:280px;grid-row:auto}
+ section,.catering{padding:60px 5%}.hero{min-height:75vh}
 }
 </style>
 </head>
@@ -54,16 +60,17 @@ small{color:#aaa}
 
 <header class="hero">
   <div class="hero-inner">
-    <div class="eyebrow">Cafeter&iacute;a &middot; Bakery &middot; Catering</div>
+    <div class="eyebrow">Catering para empresas &middot; Cafeter&iacute;a &middot; Bakery</div>
     <h1>VALENCIA PA</h1>
-    <p>Desde 2001, empezando cada d&iacute;a con buen caf&eacute;, desayunos que apetecen y una sonrisa.</p>
-    <a class="btn green" href="https://wa.me/34654161414?text=Hola%20VALENCIA%20PA%2C%20quiero%20hacer%20una%20reserva." target="_blank" rel="noopener noreferrer">Reservar por WhatsApp</a>
+    <p>Desde 2001, ofrecemos caf&eacute;, desayunos y una atenci&oacute;n cuidada para acompa&ntilde;ar cada momento del d&iacute;a.</p>
+    <a class="btn green" href="#catering">Conocer nuestro catering</a>
+    <a class="btn" href="https://wa.me/34654161414?text=Hola%20VALENCIA%20PA%2C%20quiero%20informaci%C3%B3n%20sobre%20catering%20para%20empresa." target="_blank" rel="noopener noreferrer">Solicitar propuesta</a>
   </div>
 </header>
 
 <section id="nosotros">
   <div class="intro">
-    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1200&q=85" alt="Caf&eacute; reci&eacute;n preparado">
+    <img src="Fotos%20Local/WhatsApp%20Image%202026-09-27%20at%2020.04.42.jpeg" alt="Interior de Valencia PA">
     <div>
       <div class="kicker">Nuestra historia</div>
       <h2>M&aacute;s de 20 a&ntilde;os compartiendo buenos momentos.</h2>
@@ -82,21 +89,22 @@ small{color:#aaa}
   </div>
   <div class="cards">
     <article class="card">
-      <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1000&q=85" alt="Croissants y boller&iacute;a">
+      <img src="Fotos%20Menu/WhatsApp%20Image%202026-09-27%20at%2020.06.38.jpeg" alt="Boller&iacute;a de Valencia PA">
       <div class="card-body"><h3>Caf&eacute; &amp; croissants</h3><p>Caf&eacute; reci&eacute;n hecho acompa&ntilde;ado de boller&iacute;a para comenzar el d&iacute;a con energ&iacute;a.</p></div>
     </article>
     <article class="card">
-      <img src="https://images.unsplash.com/photo-1541519227354-08fa5d50c44d?auto=format&fit=crop&w=1000&q=85" alt="Tostada con aguacate">
+      <img src="Fotos%20Menu/WhatsApp%20Image%202026-09-27%20at%2020.06.37.jpeg" alt="Tostada preparada en Valencia PA">
       <div class="card-body"><h3>Tostadas gourmet</h3><p>Aguacate, salm&oacute;n, tomate y otras combinaciones para desayunos con mucho sabor.</p></div>
     </article>
     <article class="card">
-      <img src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?auto=format&fit=crop&w=1000&q=85" alt="Tostada con huevo y aguacate">
+      <img src="Fotos%20Menu/WhatsApp%20Image%202026-09-27%20at%2020.06.37%20(1).jpeg" alt="Desayuno de Valencia PA">
       <div class="card-body"><h3>Desayunos a tu gusto</h3><p>Elige tus ingredientes y disfruta de un desayuno preparado al momento.</p></div>
     </article>
   </div>
 </section>
 
-<section id="catering">
+<section class="catering" id="catering">
+  <div class="catering-inner">
   <div class="feature">
     <div>
       <div class="kicker">Catering para empresas</div>
@@ -105,7 +113,13 @@ small{color:#aaa}
       <p>Cu&eacute;ntanos qu&eacute; necesitas, cu&aacute;ntas personas sois y para cu&aacute;ndo. Te preparamos una propuesta adaptada.</p>
       <a class="whatsapp" href="https://wa.me/34654161414?text=Hola%20VALENCIA%20PA%2C%20quiero%20informaci%C3%B3n%20sobre%20catering%20para%20empresa." target="_blank" rel="noopener noreferrer">Pedir informaci&oacute;n por WhatsApp</a>
     </div>
-    <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=85" alt="Reuni&oacute;n de empresa">
+    <img src="Fotos%20Catering/WhatsApp%20Image%202026-09-27%20at%2020.05.36.jpeg" alt="Servicio de catering de Valencia PA">
+  </div>
+  <div class="catering-gallery">
+    <img src="Fotos%20Catering/WhatsApp%20Image%202026-09-27%20at%2020.05.37%20(1).jpeg" alt="Propuesta de catering de Valencia PA">
+    <img src="Fotos%20Catering/WhatsApp%20Image%202026-09-27%20at%2020.05.36%20(1).jpeg" alt="Detalle de un catering de Valencia PA">
+    <img src="Fotos%20Catering/WhatsApp%20Image%202026-09-27%20at%2020.05.36%20(2).jpeg" alt="Bandeja de catering de Valencia PA">
+  </div>
   </div>
 </section>
 
