@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VALENCIA PA | Cafetería & Catering</title>
+<meta name="description" content="VALENCIA PA — Cafetería, desayunos, tostadas, menús del día y catering para empresas en Valencia. Desde 2001.">
+<style>
+:root{
+  --cream:#fbf7f0; --dark:#241b17; --coffee:#6b3f27; --gold:#c99a54;
+  --white:#fff; --muted:#746961; --green:#6e8b62;
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,Arial,sans-serif;color:var(--dark);background:var(--cream);line-height:1.6}
+h1,h2,h3{font-family:Georgia,serif;line-height:1.1;margin-top:0}
+a{text-decoration:none;color:inherit}
+.nav{position:sticky;top:0;z-index:10;background:rgba(36,27,23,.96);color:white;padding:14px 5%;display:flex;align-items:center;justify-content:space-between}
+.logo{font:700 1.45rem Georgia,serif;letter-spacing:2px}
+.navlinks{display:flex;gap:22px;font-size:.92rem}.navlinks a:hover{color:#e5bf82}
+.hero{min-height:82vh;display:grid;place-items:center;text-align:center;color:white;padding:80px 20px;
+background:linear-gradient(rgba(30,19,14,.48),rgba(30,19,14,.62)),url('https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1800&q=85') center/cover}
+.hero-inner{max-width:850px}.eyebrow{letter-spacing:4px;text-transform:uppercase;font-size:.8rem}
+.hero h1{font-size:clamp(3.2rem,8vw,6.8rem);margin:12px 0}.hero p{font-size:1.25rem;max-width:650px;margin:0 auto 28px}
+.btn{display:inline-block;padding:13px 22px;border-radius:999px;font-weight:700;margin:5px;background:var(--gold);color:#241b17}
+.btn.dark{background:var(--dark);color:white}.btn.green{background:#25D366;color:white}
+section{padding:80px 6%;max-width:1250px;margin:auto}.center{text-align:center}
+.intro{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+.intro img,.feature img{width:100%;height:470px;object-fit:cover;border-radius:24px;box-shadow:0 18px 45px #241b1718}
+.kicker{color:var(--coffee);font-weight:800;text-transform:uppercase;letter-spacing:2px;font-size:.8rem}
+h2{font-size:clamp(2.1rem,4vw,3.5rem)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:white;border-radius:22px;overflow:hidden;box-shadow:0 12px 35px #241b1712}
+.card img{width:100%;height:240px;object-fit:cover}.card-body{padding:22px}
+.feature{display:grid;grid-template-columns:1.05fr .95fr;gap:55px;align-items:center}
+.menu{background:#241b17;color:white;max-width:none}
+.menu-inner{max-width:1100px;margin:auto;padding:80px 6%}
+.menu-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:30px 0}
+.menu-item{background:#342721;padding:17px 20px;border-radius:14px;display:flex;justify-content:space-between;gap:20px}
+.menu-item span{color:#e6c187}
+.whatsapp{background:#25D366;color:white;padding:16px 24px;border-radius:999px;font-weight:800;display:inline-block}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:35px}
+.contact-box{background:white;border-radius:22px;padding:30px;box-shadow:0 12px 35px #241b1712}
+footer{background:#1d1512;color:#ddd;text-align:center;padding:35px 20px}
+small{color:#aaa}
+@media(max-width:800px){
+ .navlinks{display:none}.intro,.feature,.contact{grid-template-columns:1fr}
+ .cards{grid-template-columns:1fr}.menu-grid{grid-template-columns:1fr}
+ section{padding:60px 5%}.hero{min-height:75vh}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="logo">VALENCIA PA</div>
+  <div class="navlinks">
+    <a href="#nosotros">Nosotros</a><a href="#carta">Carta</a><a href="#menu">Menú del día</a><a href="#catering">Catering</a><a href="#contacto">Contacto</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">Cafetería · Bakery · Catering</div>
+    <h1>VALENCIA PA</h1>
+    <p>Desde 2001, empezando cada día con buen café, desayunos que apetecen y una sonrisa.</p>
+    <a class="btn" href="#menu">Ver menú del día</a>
+    <a class="btn green" href="https://wa.me/34654161414?text=Hola%20VALENCIA%20PA%2C%20quiero%20reservar%20el%20men%C3%BA%20del%20d%C3%ADa." target="_blank">Reservar por WhatsApp</a>
+  </div>
+</header>
+
+<section id="nosotros">
+  <div class="intro">
+    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1200&q=85" alt="Café recién preparado">
+    <div>
+      <div class="kicker">Nuestra historia</div>
+      <h2>Más de 20 años compartiendo buenos momentos.</h2>
+      <p>VALENCIA PA nació en 2001 con una idea muy sencilla: ofrecer un buen servicio, productos ricos y hacer que cada persona que entra por la puerta se vaya un poquito más feliz.</p>
+      <p>Desde entonces seguimos trabajando cada día con la misma ilusión, cuidando el café, los desayunos, nuestras tostadas, la bollería y los platos que preparamos para nuestros clientes.</p>
+      <p><strong>Desde 2001 dando el mejor servicio y arrancando una sonrisa todos los días.</strong></p>
+    </div>
+  </div>
+</section>
+
+<section id="carta">
+  <div class="center">
+    <div class="kicker">Para empezar bien el día</div>
+    <h2>Café, tostadas y algo dulce</h2>
+    <p>Un desayuno tranquilo o un café rápido. Tú eliges el momento.</p>
+  </div>
+  <div class="cards">
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1000&q=85" alt="Croissants y bollería">
+      <div class="card-body"><h3>Café & croissants</h3><p>Café recién hecho acompañado de bollería para comenzar el día con energía.</p></div>
+    </article>
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1541519227354-08fa5d50c44d?auto=format&fit=crop&w=1000&q=85" alt="Tostada con aguacate">
+      <div class="card-body"><h3>Tostadas gourmet</h3><p>Aguacate, salmón, tomate y otras combinaciones para desayunos con mucho sabor.</p></div>
+    </article>
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?auto=format&fit=crop&w=1000&q=85" alt="Tostada con huevo y aguacate">
+      <div class="card-body"><h3>Desayunos a tu gusto</h3><p>Elige tus ingredientes y disfruta de un desayuno preparado al momento.</p></div>
+    </article>
+  </div>
+</section>
+
+<section id="catering">
+  <div class="feature">
+    <div>
+      <div class="kicker">Catering para empresas</div>
+      <h2>Tu reunión merece algo rico.</h2>
+      <p>Realizamos servicios de catering para empresas: desayunos, bandejas, cafés y propuestas para reuniones, eventos y jornadas de trabajo.</p>
+      <p>Cuéntanos qué necesitas, cuántas personas sois y para cuándo. Te preparamos una propuesta adaptada.</p>
+      <a class="whatsapp" href="https://wa.me/34654161414?text=Hola%20VALENCIA%20PA%2C%20quiero%20informaci%C3%B3n%20sobre%20catering%20para%20empresa." target="_blank">Pedir información por WhatsApp</a>
+    </div>
+    <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=85" alt="Reunión de empresa">
+  </div>
+</section>
+
+<div class="menu" id="menu">
+  <div class="menu-inner">
+    <div class="center">
+      <div class="kicker" style="color:#e6c187">Cada día, algo diferente</div>
+      <h2>Menú del día</h2>
+      <p>Actualiza esta sección diariamente con los platos disponibles.</p>
+    </div>
+    <div class="menu-grid" id="menu-list">
+      <div class="menu-item"><strong>Plato del día 1</strong><span>Consultar</span></div>
+      <div class="menu-item"><strong>Plato del día 2</strong><span>Consultar</span></div>
+      <div class="menu-item"><strong>Plato del día 3</strong><span>Consultar</span></div>
+      <div class="menu-item"><strong>Plato del día 4</strong><span>Consultar</span></div>
+      <div class="menu-item"><strong>Plato del día 5</strong><span>Consultar</span></div>
+      <div class="menu-item"><strong>Ensalada del día</strong><span>Consultar</span></div>
+    </div>
+    <div class="center">
+      <a class="whatsapp" href="https://wa.me/34654161414?text=Hola%20VALENCIA%20PA%2C%20quiero%20reservar%20el%20men%C3%BA%20del%20d%C3%ADa." target="_blank">📲 Reservar menú por WhatsApp</a>
+    </div>
+  </div>
+</div>
+
+<section id="contacto">
+  <div class="center"><div class="kicker">Ven a vernos</div><h2>Estamos en Valencia</h2></div>
+  <div class="contact">
+    <div class="contact-box">
+      <h3>VALENCIA PA</h3>
+      <p>📍 Antigua Senda de Senent, 10<br>Valencia</p>
+      <p>📞 <a href="tel:+34654161414">654 161 414</a></p>
+      <p>📸 Instagram: <a href="https://instagram.com/valenciapa2001" target="_blank"><strong>@valenciapa2001</strong></a></p>
+    </div>
+    <div class="contact-box">
+      <h3>¿Quieres reservar?</h3>
+      <p>Escríbenos directamente y te atendemos por WhatsApp.</p>
+      <a class="whatsapp" href="https://wa.me/34654161414" target="_blank">Abrir WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <strong>VALENCIA PA</strong><br>
+  Cafetería · Bakery · Catering<br>
+  <small>Antigua Senda de Senent, 10 · Valencia · 654 161 414</small>
+</footer>
+
+</body>
+</html>
