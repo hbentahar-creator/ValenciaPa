@@ -37,6 +37,11 @@ h2{font-size:clamp(2.1rem,4vw,3.5rem)}
 .catering-gallery{display:grid;grid-template-columns:1.2fr .8fr;gap:18px;margin-top:35px}
 .catering-gallery img{width:100%;height:310px;object-fit:cover;border-radius:12px}
 .catering-gallery img:first-child{grid-row:span 2;height:638px}
+.gallery-tabs{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin:28px 0 30px}
+.gallery-tab{border:1px solid var(--coffee);background:transparent;color:var(--coffee);padding:9px 16px;border-radius:999px;font:700 .9rem Inter,Arial,sans-serif;cursor:pointer}
+.gallery-tab.active,.gallery-tab:hover{background:var(--coffee);color:white}
+.photo-gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.photo-gallery img{width:100%;height:230px;object-fit:cover;border-radius:10px;display:block}
 .whatsapp{background:#25D366;color:white;padding:16px 24px;border-radius:999px;font-weight:800;display:inline-block}
 .contact{display:grid;grid-template-columns:1fr 1fr;gap:35px}
 .contact-box{background:white;border-radius:22px;padding:30px;box-shadow:0 12px 35px #241b1712}
@@ -45,6 +50,7 @@ small{color:#aaa}
 @media(max-width:800px){
  .navlinks{display:none}.intro,.feature,.contact{grid-template-columns:1fr}
  .cards,.catering-gallery{grid-template-columns:1fr}.catering-gallery img,.catering-gallery img:first-child{height:280px;grid-row:auto}
+ .photo-gallery{grid-template-columns:repeat(2,1fr)}.photo-gallery img{height:190px}
  section,.catering{padding:60px 5%}.hero{min-height:75vh}
 }
 </style>
@@ -54,7 +60,7 @@ small{color:#aaa}
 <nav class="nav">
   <div class="logo">VALENCIA PA</div>
   <div class="navlinks">
-    <a href="#nosotros">Nosotros</a><a href="#carta">Cafeter&iacute;a</a><a href="#menu-dia">Men&uacute; del d&iacute;a</a><a href="#catering">Catering</a><a href="#contacto">Contacto</a>
+    <a href="#nosotros">Nosotros</a><a href="#carta">Cafeter&iacute;a</a><a href="#menu-dia">Men&uacute; del d&iacute;a</a><a href="#catering">Catering</a><a href="#galeria">Galer&iacute;a</a><a href="#contacto">Contacto</a>
   </div>
 </nav>
 
@@ -145,6 +151,19 @@ small{color:#aaa}
   </div>
 </section>
 
+<section id="galeria">
+  <div class="center">
+    <div class="kicker">Momentos VALENCIA PA</div>
+    <h2>Galer&iacute;a de fotos</h2>
+  </div>
+  <div class="gallery-tabs" role="tablist" aria-label="Categor&iacute;as de la galer&iacute;a">
+    <button class="gallery-tab active" type="button" data-filter="catering">Catering</button>
+    <button class="gallery-tab" type="button" data-filter="menu">Men&uacute; del d&iacute;a</button>
+    <button class="gallery-tab" type="button" data-filter="local">Nuestro local</button>
+  </div>
+  <div class="photo-gallery" id="photo-gallery"></div>
+</section>
+
 <section id="contacto">
   <div class="center"><div class="kicker">Ven a vernos</div><h2>Estamos en Valencia</h2></div>
   <div class="contact">
@@ -168,5 +187,56 @@ small{color:#aaa}
   <small>Antigua Senda de Senent, 10 &middot; Valencia &middot; 654 161 414</small>
 </footer>
 
+<script>
+const galleryPhotos = [
+  ['catering', 'Fotos%20Catering/WhatsApp%20Image%202026-09-27%20at%2020.05.37.jpeg', 'Catering de Valencia PA'],
+  ['catering', 'Fotos%20Catering/WhatsApp%20Image%202026-09-27%20at%2020.05.37%20(6).jpeg', 'Catering de Valencia PA'],
+  ['catering', 'Fotos%20Catering/WhatsApp%20Image%202026-09-27%20at%2020.05.37%20(5).jpeg', 'Catering de Valencia PA'],
+  ['catering', 'Fotos%20Catering/WhatsApp%20Image%202026-09-27%20at%2020.05.37%20(4).jpeg', 'Catering de Valencia PA'],
+  ['catering', 'Fotos%20Catering/WhatsApp%20Image%202026-09-27%20at%2020.05.37%20(3).jpeg', 'Catering de Valencia PA'],
+  ['catering', 'Fotos%20Catering/WhatsApp%20Image%202026-09-27%20at%2020.05.37%20(2).jpeg', 'Catering de Valencia PA'],
+  ['catering', 'Fotos%20Catering/WhatsApp%20Image%202026-09-27%20at%2020.05.37%20(1).jpeg', 'Catering de Valencia PA'],
+  ['catering', 'Fotos%20Catering/WhatsApp%20Image%202026-09-27%20at%2020.05.36.jpeg', 'Catering de Valencia PA'],
+  ['catering', 'Fotos%20Catering/WhatsApp%20Image%202026-09-27%20at%2020.05.36%20(7).jpeg', 'Catering de Valencia PA'],
+  ['catering', 'Fotos%20Catering/WhatsApp%20Image%202026-09-27%20at%2020.05.36%20(6).jpeg', 'Catering de Valencia PA'],
+  ['catering', 'Fotos%20Catering/WhatsApp%20Image%202026-09-27%20at%2020.05.36%20(5).jpeg', 'Catering de Valencia PA'],
+  ['catering', 'Fotos%20Catering/WhatsApp%20Image%202026-09-27%20at%2020.05.36%20(4).jpeg', 'Catering de Valencia PA'],
+  ['catering', 'Fotos%20Catering/WhatsApp%20Image%202026-09-27%20at%2020.05.36%20(3).jpeg', 'Catering de Valencia PA'],
+  ['catering', 'Fotos%20Catering/WhatsApp%20Image%202026-09-27%20at%2020.05.36%20(2).jpeg', 'Catering de Valencia PA'],
+  ['catering', 'Fotos%20Catering/WhatsApp%20Image%202026-09-27%20at%2020.05.36%20(1).jpeg', 'Catering de Valencia PA'],
+  ['menu', 'Fotos%20Menu/WhatsApp%20Image%202026-09-27%20at%2020.06.38.jpeg', 'Plato del men&uacute; del d&iacute;a'],
+  ['menu', 'Fotos%20Menu/WhatsApp%20Image%202026-09-27%20at%2020.06.38%20(1).jpeg', 'Plato del men&uacute; del d&iacute;a'],
+  ['menu', 'Fotos%20Menu/WhatsApp%20Image%202026-09-27%20at%2020.06.37.jpeg', 'Plato del men&uacute; del d&iacute;a'],
+  ['menu', 'Fotos%20Menu/WhatsApp%20Image%202026-09-27%20at%2020.06.37%20(6).jpeg', 'Plato del men&uacute; del d&iacute;a'],
+  ['menu', 'Fotos%20Menu/WhatsApp%20Image%202026-09-27%20at%2020.06.37%20(5).jpeg', 'Plato del men&uacute; del d&iacute;a'],
+  ['menu', 'Fotos%20Menu/WhatsApp%20Image%202026-09-27%20at%2020.06.37%20(4).jpeg', 'Plato del men&uacute; del d&iacute;a'],
+  ['menu', 'Fotos%20Menu/WhatsApp%20Image%202026-09-27%20at%2020.06.37%20(3).jpeg', 'Plato del men&uacute; del d&iacute;a'],
+  ['menu', 'Fotos%20Menu/WhatsApp%20Image%202026-09-27%20at%2020.06.37%20(2).jpeg', 'Plato del men&uacute; del d&iacute;a'],
+  ['menu', 'Fotos%20Menu/WhatsApp%20Image%202026-09-27%20at%2020.06.37%20(1).jpeg', 'Plato del men&uacute; del d&iacute;a'],
+  ['local', 'Fotos%20Local/WhatsApp%20Image%202026-09-27%20at%2020.04.42.jpeg', 'Interior de Valencia PA'],
+  ['local', 'Fotos%20Local/WhatsApp%20Image%202026-09-27%20at%2020.04.42%20(3).jpeg', 'Interior de Valencia PA'],
+  ['local', 'Fotos%20Local/WhatsApp%20Image%202026-09-27%20at%2020.04.42%20(2).jpeg', 'Interior de Valencia PA'],
+  ['local', 'Fotos%20Local/WhatsApp%20Image%202026-09-27%20at%2020.04.42%20(1).jpeg', 'Interior de Valencia PA']
+];
+
+const gallery = document.querySelector('#photo-gallery');
+const galleryTabs = document.querySelectorAll('.gallery-tab');
+
+function renderGallery(filter) {
+  gallery.innerHTML = galleryPhotos
+    .filter(([category]) => filter === 'all' || category === filter)
+    .map(([, source, alt]) => `<img src="${source}" alt="${alt}" loading="lazy">`)
+    .join('');
+}
+
+galleryTabs.forEach((tab) => {
+  tab.addEventListener('click', () => {
+    galleryTabs.forEach((item) => item.classList.toggle('active', item === tab));
+    renderGallery(tab.dataset.filter);
+  });
+});
+
+renderGallery('catering');
+</script>
 </body>
 </html>
